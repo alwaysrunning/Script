@@ -1,0 +1,80 @@
+{
+    "Height": 768,
+    "ImageHeight": 550,
+    "ImageWidth": 340,
+    "List": [
+        {
+            "Height": 550,
+            "Name": "00.png",
+            "Width": 340,
+            "X": 0,
+            "Y": 0
+        },
+        {
+            "Height": 550,
+            "Name": "01.png",
+            "Width": 340,
+            "X": 0,
+            "Y": 0
+        },
+        {
+            "Height": 504,
+            "Name": "02.png",
+            "Width": 419,
+            "X": 0,
+            "Y": 0
+        },
+        {
+            "Height": 550,
+            "Name": "03.png",
+            "Width": 340,
+            "X": 0,
+            "Y": 0
+        },
+        {
+            "Height": 550,
+            "Name": "04.png",
+            "Width": 340,
+            "X": 547,
+            "Y": 733
+        },
+        {
+            "Height": 550,
+            "Name": "05.png",
+            "Width": 340,
+            "X": 528,
+            "Y": 693
+        },
+        {
+            "Height": 550,
+            "Name": "06.png",
+            "Width": 340,
+            "X": 531,
+            "Y": 665
+        },
+        {
+            "Height": 550,
+            "Name": "07.png",
+            "Width": 340,
+            "X": 534,
+            "Y": 648
+        },
+        {
+            "Height": 550,
+            "Name": "08.png",
+            "Width": 340,
+            "X": 530,
+            "Y": 635
+        },
+        {
+            "Height": 550,
+            "Name": "09.png",
+            "Width": 340,
+            "X": 520,
+            "Y": 622
+        }
+    ],
+    "MinLeft": 0,
+    "MinTop": 0,
+    "Width": 1024
+}

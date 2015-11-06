@@ -1,0 +1,27 @@
+<html>
+<head>
+	<style type="text/css">
+       .jerry{
+       	 position: relative;
+       	 width: 200px;
+       	 height: 400px;
+       	 margin: 0 auto;
+       }
+	</style>
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript" src="sprite.js"></script>
+	<script type="text/javascript">
+           window.onload = function(){
+           	var senSprite=new seniorSprite($(".jerry"),"jerry/",function(){		
+				setTimeout(function(){	
+					console.log("succuss")
+				},3000)
+			});
+		     senSprite.setAni();
+           }
+	</script>
+</head>
+<body>
+	<div class="jerry"></div>
+</body>
+</html>

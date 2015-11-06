@@ -1,0 +1,85 @@
+<html>
+<head>
+	<style type="text/css">
+	   body{background: #000}
+       .start1{
+       	 position: relative;
+       	 width: 100px;
+       	 height: 100px;
+       	 margin: 0 auto;
+       	 background-image: url("images/start.png");
+       	 background-size: 100% 200%;
+       }
+       .feed-bird{ margin: 0 auto; width:100px; height:100px; background-image:url(images/feed-bird.png); background-size:100% 2200%;}
+       .deer{ margin: 0 auto; width:100px; height:100px; background-image:url(images/deer.png); background-size:1200% 100%;}
+       .trace{ width:200px; height:200px;}
+       .flyBird{ width:100px; height:100px; background-image:url(images/bird.png); background-size:100% 400%;}
+       @-webkit-keyframes fly-stage-animations{
+    0%{-webkit-transform: rotateZ(50deg) translateX(0%) translateY(-50%);}
+    18%{-webkit-transform: rotateZ(20deg) translateX(100%) translateY(90%);}
+    36%{-webkit-transform: rotateZ(0deg) translateX(200%) translateY(80%);}
+    72%{-webkit-transform: rotateZ(0deg) translateX(300%) translateY(100%);}
+    86%{-webkit-transform: rotateZ(0deg) translateX(400%) translateY(50%);}
+    100%{-webkit-transform: rotateZ(0deg) translateX(500%) translateY(-100%);}
+}
+.active{
+    -webkit-transform: rotateZ(50deg) translateX(0%) translateY(-50%);
+    -webkit-animation: fly-stage-animations 8s;
+    /* animation-iteration-count: "infinite"; */
+}
+	</style>
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript" src="sprite.js"></script>
+	<script type="text/javascript">
+        window.onload = function(){
+           	var start1=new Sprite($('.start1'), {
+                fps: 1,
+                frames: 2,
+                vertical: true,
+                mode: 'css3',
+                iteration: 'infinite'
+            }); 
+            start1.play();
+            var feedBird = new Sprite($('.feed-bird'),{
+            	fps: 3,
+            	frames: 22,
+            	vertical: true,
+            	iteration: 10
+            })
+            feedBird.play()
+            var deer = new Sprite($('.deer'),{
+            	fps: 3,
+            	frames: 12,
+            	vertical: false,
+            	iteration: 'infinite'
+            })
+            deer.play();
+            var flyBird = new Sprite($('.flyBird'),{
+            	fps: 3,
+            	frames: 12,
+            	vertical: true,
+            	iteration: 'infinite'
+            })
+            flyBird.play();
+            //start1.pause();
+            /*setTimeout(function(){
+            	start1.pause()
+            },3000)*/
+            $('.trace').on("webkitAnimationEnd",function(){
+            	$(this).removeClass('active');
+            	var time = setTimeout(function(){
+                    $('.trace').addClass('active')
+            	},3000)
+            })
+        }
+	</script>
+</head>
+<body>
+	<div class="start1"></div>
+	<div class="feed-bird"></div>
+	<div class="deer"></div>
+	<div class="trace active">
+	   <div class="flyBird"></div>
+	</div>   
+</body>
+</html>
