@@ -1,4 +1,4 @@
-# Scripte
+# Usable
 
 1. seniorSprite 高级精灵动画
 
